@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)chrome://new-tab-page/ -->
+<html dir="ltr" lang="hu" class="focus-outline-visible"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>Új lap</title>
+</head>
+<body>
+    <div id="app" style="display: flex">
+        <textarea  style="margin: 0px; width: 865px; height: 422px; font-size:24px;">{{jsonString}}
+        </textarea>
+        <div style="font-size:24px;">
+            {
+                <div v-for="key in Object.keys(json)">
+                    {{key}}:{{json[key]}} 
+                </div>
+                <add-btn datatype="object" @saved="addNew($event)"></add-btn>
+            }
+        </div>
+    </div>
+    <script src="./components/add-btn.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
